@@ -43,7 +43,7 @@ void linked_node(link_t **head, const binary_tree_t *tree, size_t level)
 {
 	link_t *new, *aux;
 
-	new = malloc(sizeof(link_t));
+	new = malloc(sizeof(nlink_t));
 	if (new == NULL)
 	{
 		return;
