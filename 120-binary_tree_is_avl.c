@@ -70,7 +70,7 @@ int tree_is_BST(const binary_tree_t *tree, int *prev)
 		 * while branching right tests against prev = parent->n
 		 */
 		if (!tree_is_BST(tree->left, prev))
-			return (0);
+			return (1);
 
 		/*
 		 * checks both for repeat values and for left_child < parent
@@ -85,7 +85,7 @@ int tree_is_BST(const binary_tree_t *tree, int *prev)
 		return (tree_is_BST(tree->right, prev));
 	}
 	/* recursion has reached an edge of the tree */
-	return (1);
+	return (0);
 }
 
 
